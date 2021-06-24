@@ -1,0 +1,39 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "vmName": {
+      "value": "simpleLinuxVM"
+    },
+    "adminUsername": {
+      "value": "vagrant"
+    },
+    "authenticationType": {
+      "value": "sshPublicKey"
+    },
+    "adminPasswordOrKey": {
+      "value": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCvmRxPH0Q+TTUdMhEV49wZrtj45Qp4gc5Waz5GUjifDd1hkTmOzADTrkC7W0Po2QFJWyFklIxN7EFiTNyPCR63gDGY8kDXDdCYrGn4Q87tQBxuiYy8vlTG4rLjq5CyN53EmhpNAO+LVA/5DF+PYtzvB2pW8AX3ueGXBi1tbIh7fEzhZ06Y7MqO0vSij5XIXw8DCcmrqDKfAopElAilA5dO6tgOPYStDs73B9JppGRbfP+JMQMb3L+4ZUYNsKb+qR2vTM/ASRLSzeO6mskCHGhDhhxHBA/1WpoTEyrw8jeRMTis3StzqehHptyFAb34GQy8Oby26mcWy3JVo8VnFirOvuBouikUIOX4yMoaIn2BdIrrbY8qu80CAILG/A13HCj+CK0U0yD5Abc+ZA/Dnq8udSC7Cy7+2wNXElmiMAZ5ksjKgZqa4nOLoV0iCFn2AwJ8UagDWo17CczQXLe9eDeUM56pMo30MXOKB2EIK+MBybm0pgHN+6Z39g49i5Te2SOajda/EBQvIbXkT4Lblo7RZDdCeoAVlBb6vaBj1n4YA4+seqBkvW4sO7CFREueW8RazqV7atGzHyGNRwHyAH91bU89/EN8+uPHIera0YDZ0/lQluvytcRMaNU0L+a38Srgbbgvh51DxX50YhQ3hqoodI6T1FHzbxHmgO6jkGpoAw== vagrant@ubuntu-bionic"
+    },
+    "dnsLabelPrefix": {
+      "value": "[toLower(format('simplelinuxvm-{0}', uniqueString(resourceGroup().id)))]"
+    },
+    "ubuntuOSVersion": {
+      "value": "18.04-LTS"
+    },
+	"location": {
+      "value": "West Europe"
+    },
+    "vmSize": {
+      "value": "Standard_B2s"
+    },
+    "virtualNetworkName": {
+      "value": "vNet"
+    },
+    "subnetName": {
+      "value": "Subnet"
+    },
+    "networkSecurityGroupName": {
+      "value": "SecGroupNet"
+    }
+  }
+}
